@@ -27,6 +27,17 @@ function criaElemTarefa(tarefa) {
         <button class="item__button">Remover</button>
     `;
 
+    const btnRemover = div.querySelector('.item__button');
+    btnRemover.addEventListener('click', () => {
+        // Encontrar o índice da tarefa dentro do array
+        const index = listaDeTarefas.findIndex(item => item.descricao === tarefa.descricao);
+        if (index !== -1) {
+            listaDeTarefas.splice(index, 1);
+            localStorage.setItem('Produtos', JSON.stringify(listaDeTarefas));
+            div.remove();
+        }
+    });
+
     return div;
 }
 

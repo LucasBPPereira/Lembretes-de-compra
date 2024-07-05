@@ -67,7 +67,7 @@ body {
 }
 
 .container__list {
-    margin: 20px 40px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -82,7 +82,7 @@ body {
 }
 
 .item-card {
-    width: 80%;
+    width: 90%;
     color: #1E1E24;
     font-weight: 700;
     font-size: 18px;
@@ -101,4 +101,17 @@ body {
     cursor: pointer;
     background-color: #F38D68;
 
+}
+
+@media screen and (max-width: 760px) {
+    #container__lembretes {
+        padding: 20px;
+    }
+
+    #section__container input {
+        max-width: 60%;
+    }
+    .section__button {
+        width: 80px;
+    }
 }
